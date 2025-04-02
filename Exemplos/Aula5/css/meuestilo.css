@@ -1,0 +1,24 @@
+p {
+    color: green;
+    font-style: italic;
+}
+
+h3, h4 {
+    font-family: arial;
+}
+
+h3 {
+    color: blue;
+}
+
+h4 {
+    color: yellow;
+}
+
+li {
+    font-size: 12px;
+}
+
+.nome {
+    color:rgb(52, 63, 216);
+}
