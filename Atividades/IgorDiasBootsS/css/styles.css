@@ -47,22 +47,25 @@ h1 {
     justify-content: center;
 }
 
-img {
-    max-height: 200px;
-    max-width: 200px;
-}
-.carousel-control-next,.carousel-control-next-icon, .carousel-control-prev, .carousel-control-prev-icon{
-    color:black;
-    z-index: 2000;
+
+.carousel-control-next-icon,.carousel-control-prev-icon{
+    color: rgb(0, 0, 0);
+    background-color: blue;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
 }
 
 #carouselExample {
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
 
 }
 
-#carouselExample img {}
+#carouselExample img {
+    width:100%;
+    height: auto;
+}
 
 
 .content {
@@ -70,4 +73,13 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+footer {
+    text-align: center;
+    background-color: rgb(52, 93, 255);
+    color:rgb(255, 255, 255);
+    height: 100%;
+    bottom: 0;
 }
