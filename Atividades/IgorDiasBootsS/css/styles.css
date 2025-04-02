@@ -1,0 +1,73 @@
+* {
+    font-family: "Arial";
+}
+
+.myfrm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+form{
+    margin-top: 30px;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.555);
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.form-control {
+    border: 1px solid rgba(0, 0, 0, 0.644);
+}
+
+.form-check-input {
+    border: 1px solid rgba(0, 0, 0, 0.644);
+}
+
+.table {
+    border: 1px solid rgba(0, 0, 0, 0.644);
+    width: 500px;
+}
+
+td , th{
+    border: 1px solid rgba(0, 0, 0, 0.644);
+}
+
+h1 {
+    color: rgb(55, 55, 255);
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-height: 200px;
+    max-width: 200px;
+}
+.carousel-control-next,.carousel-control-next-icon, .carousel-control-prev, .carousel-control-prev-icon{
+    color:black;
+    z-index: 2000;
+}
+
+#carouselExample {
+    width: 300px;
+    height: 400px;
+
+}
+
+#carouselExample img {}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
