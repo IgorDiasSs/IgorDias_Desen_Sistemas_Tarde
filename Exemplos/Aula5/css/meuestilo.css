@@ -1,6 +1,14 @@
+body {
+    background: silver;
+    /* background-image: url(../img/solo.png);
+    background-repeat: no-repeat; */
+    font-family: "Arial Black";
+}
+
 p {
     color: green;
     font-style: italic;
+    font-family: "Monotype Corsiva";
 }
 
 h3, h4 {
