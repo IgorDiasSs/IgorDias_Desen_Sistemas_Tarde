@@ -1,64 +1,68 @@
-// Executar Mascáras
+    // Executar Mascáras
 
-//Define o Objeto e chama a função
-function mascara(o, f) {
+    //Define o Objeto e chama a função
+    function mascara(o, f) {
 
-    objeto = o
-    funcao = f
-    setTimeout("executaMascara()",1)
+        objeto = o;
+        funcao = f;
+        setTimeout("executaMascara()", 1);
 
-}
+    }
 
 
-function executaMascara() {
-    objeto.value=funcao(objeto.value)
-}
+    function executaMascara() {
+        objeto.value=funcao(objeto.value);
+    }
 
-//Mascaras
+    //Mascaras
 
-//Mascara do Telefone
+    //Mascara do Telefone
 
-function Telefone(variavel) {
-    //parenteses em volta dos dois primeiros digitos
-    variavel = variavel.replace(/\D/g,"");
+    function telefone(variavel) {
+        //parenteses em volta dos dois primeiros digitos
+        variavel = variavel.replace(/\D/g,"");
 
-    variavel = variavel.replace(/^(\d\d)(\d)/g,"($1)$2")
-    variavel=variavel.replace(/(\d{4})(\d)/,"$1-$2")
+        variavel = variavel.replace(/^(\d\d)(\d)/g,"($1)$2");
+        variavel=variavel.replace(/(\d{4})(\d)/,"$1-$2");
 
-    return variavel
-}
+        return variavel
+    }
 
-//Mascara do RG e CPF
-function RGeCPF(variavel){
-    variavel=variavel.replace(/\D/g,"") // remove o que não é numero
+    //Mascara do RG e CPF
+    function RGeCPF(variavel){
+        variavel=variavel.replace(/\D/g,""); // remove o que não é numero
 
-    variavel=variavel.replace(/(\d{3})(\d)/, "$1.$2") // Coloca um ponto após o terceiro o digito e o quarto
+        variavel=variavel.replace(/(\d{3})(\d)/, "$1.$2") ;// Coloca um ponto após o terceiro o digito e o quarto
 
-    variavel=variavel.replace(/(\d{3})(\d)/, "$1.$2") // Coloca um ponto após o sexto o digito e o setimo
+        variavel=variavel.replace(/(\d{3})(\d)/, "$1.$2"); // Coloca um ponto após o sexto o digito e o setimo
 
-    variavel=variavel.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+        variavel=variavel.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); 
 
-    return variavel
-}
+        return variavel;
+    }
 
-//Mascara do CEP
+    //Mascara do CEP
 
-function cep(variavel) {
-    variavel=variavel.replace(/\D/g,"") // remove o que não é numero
-    
-    variavel=variavel.replace(/\(d{2})(\d)/,"$1.$2")
-    variavel=variavel.replace(/\(d{2})(\d{1,3})$/,"$1.$2")
-    return variavel
-}
+    function cep(variavel) {
+        variavel=variavel.replace(/\D/g,""); // remove o que não é numero
+        
+        variavel=variavel.replace(/(\d{5})(\d{1,3})$/,"$1-$2");
 
-// mascara data
+        variavel=variavel.replace(/(\d{2})(\d)/,"$1.$2");
 
-function data(variavel) {
-    variavel=variavel.replace(/\D/g,"") // remove o que não é numero
+        return variavel;
+    }
 
-    variavel.replace(/(\d{2})(\d)/,"$1/$2")
+    // mascara data
 
-    variavel.replace(/(\d{2})(\d)/,"$1/$2")
+    function data(variavel) {
+        variavel = variavel.replace(/\D/g,"") ;// remove o que não é numero
 
-    return variavel
-}
+        variavel = variavel.replace(/(\d{2})(\d)/,"$1/$2");
+
+        variavel = variavel.replace(/(\d{2})(\d)/,"$1/$2");
+
+        return variavel;
+    }
+
+    console.log("hello world");
