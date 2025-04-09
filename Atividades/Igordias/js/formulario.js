@@ -68,4 +68,5 @@
     function CartaoSus(variavel) {
         variavel = variavel.replace(/\D/g,"") ;// remove o que não é numero
 
+        return variavel;
     }
