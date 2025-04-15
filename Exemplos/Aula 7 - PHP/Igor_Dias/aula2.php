@@ -14,5 +14,22 @@
         $data_hoje = date("d/m/Y-h:i:sa");
     ?>
     <p align="center">Hoje é Dia <?php echo $data_hoje; ?></p>
+
+    <?php
+        echo "texto ";
+        echo "Hello World ";
+        echo  "Isso abrange
+        várias linhas. As novas linhas serão saída também. ";
+        echo "Isso abrange  <br> multiplas linhas. A nova linha será  <br> a saída também.<br>";
+        echo "Caracteres Escaping são feitos \"Como esse\".<br>";
+    ?>
+<hr>
+    <?php
+        $comida_favorita = "Italiana";
+        print $comida_favorita[2];
+        $comida_favorita = "Cozinha ". $comida_favorita;
+        echo "<br>";
+        print $comida_favorita; 
+    ?>
 </body>
 </html>
