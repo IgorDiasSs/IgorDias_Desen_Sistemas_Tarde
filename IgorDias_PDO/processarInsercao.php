@@ -4,7 +4,7 @@
     
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         //ta dando erro
-        $sql = "INSERT INTO Cliente (nome, endereco, telefone, email) VALUES(:nome, :endereco, :telefone, :email);";
+        $sql = "INSERT INTO Cliente (nome_cliente, endereco_cliente, telefone_cliente, email_cliente) VALUES(:nome, :endereco, :telefone, :email);";
 
         $stmt = $conexao->prepare($sql);
         $stmt->bindParam(":nome", $_POST["nome"]);

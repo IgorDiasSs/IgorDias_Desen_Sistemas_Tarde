@@ -19,9 +19,9 @@
         if(!$cliente){
             $msgErro = "Erro: Cliente não cadastrado";
         }
-        else {
-            $msgErro = "Digite o ID do Cliente para buscar os dados";
-        }
+    }
+    else {
+        $msgErro = "Digite o ID do Cliente para buscar os dados";
     }
 ?>
 <!DOCTYPE html>
