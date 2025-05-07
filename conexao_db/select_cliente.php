@@ -8,6 +8,7 @@
 
     $result = $conexao->query($sql);
     //Verifica se há resultados na consulta
+    echo "Clientes Cadastrados";
     if ($result->num_rows > 0){
         //itera sobre os resultados e exive dados
         while ($linha = $result->fetch_assoc()){

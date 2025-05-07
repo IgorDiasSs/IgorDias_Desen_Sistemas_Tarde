@@ -15,9 +15,24 @@
     $stmt = $conexao->prepare("INSERT INTO Cliente (nome_cliente, endereco_cliente,telefone_cliente, email_cliente) VALUES(?,?,?,?);");
     $stmt->bind_param("ssss",$nome, $endereco,$telefone, $email);
 
+
     if ($stmt->execute()){
-        echo "Cliente adicionado com sucesso";
+        echo "Cliente adicionado com sucesso<br>";
+        echo "Clientes Cadastrados<hr>";
         
+        $sql = "SELECT id_cliente, nome_cliente, email_cliente FROM Cliente";
+
+        $result = $conexao->query($sql);
+        if ($result->num_rows > 0){
+            //itera sobre os resultados e exive dados
+            while ($linha = $result->fetch_assoc()){
+                echo "<br>ID:". $linha["id_cliente"]. "- Nome: ". $linha["nome_cliente"]. " - Email: ".$linha["email_cliente"]. "<br>";
+            }
+        }
+        else {
+            //Caso nenhum resultado seja encontrado
+            echo "Nenhum Cliente Cadastrado.";
+        }
     }
     else {
         echo "ERRO ao adicionar cliente". $stmt->error;
