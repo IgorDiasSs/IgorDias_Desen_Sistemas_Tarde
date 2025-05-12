@@ -30,11 +30,17 @@ label {
 }
 
 input[type="text"],
-input[type="tel"]{
+input[type="tel"],
+input[type="number"]{
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+
+#desc{
+    height: 60px;
 }
 
 button {
