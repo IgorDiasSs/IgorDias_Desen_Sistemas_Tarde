@@ -33,3 +33,4 @@ INSERT INTO usuario (nome_usuario, usuario, senha_usuario, nivel) VALUES
 ('Visitante', 'visitante', MD5('visi012'), 4),
 ('Teste', 'teste', MD5('teste321'), 0);
 
+drop table Cliente;
