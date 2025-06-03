@@ -1,0 +1,19 @@
+{
+    "name": "vendor/basic",
+    "description": "Trabalho do Curso",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Basic\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "IgorDias",
+            "email": "igordasilvadias07@gmail.com"
+        }
+    ],
+    "require": {
+        "setasign/fpdf": "^1.8"
+    }
+}

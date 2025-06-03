@@ -23,6 +23,7 @@ form {
     flex-direction: column;
     gap: 15px; /* Espaço entre os elementos */
     width: 300px;
+    margin-top: 10px;
 }
 
 /* Estiliza os rótulos */
@@ -75,16 +76,12 @@ p, h2{
 }
 
 
-.glass-bg {
-    background: rgba(255, 255, 255, 0.19);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.8px);
-    -webkit-backdrop-filter: blur(4.8px);
+.other-bg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    justify-content: center;
+    position: relative;
 }
 
 .dropdown-toggle {
@@ -94,4 +91,55 @@ p, h2{
 
 .dropdown-item {
     color:rgb(0, 99, 170) !important;
+}
+.d-flex {
+    align-self: flex-end;
+    margin-right: 20px;
+    top:0;
+    justify-self: flex-start;
+}
+
+body > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estiliza apenas os <li> filhos diretos de body > ul */
+body > ul > li {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estiliza apenas os links dentro dessa lista */
+body > ul > li > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1f50e0;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+body > ul > li > a:hover {
+    color: #0033a0;
+}
+
+/* Botão de exclusão sem afetar outros botões Bootstrap */
+button.excluir {
+    background-color: rgb(255, 77, 77);
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+button.excluir:hover {
+    background-color: rgb(200, 0, 0);
 }
