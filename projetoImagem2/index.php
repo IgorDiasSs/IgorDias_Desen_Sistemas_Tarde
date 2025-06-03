@@ -20,7 +20,6 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="cadastro_funcionario.php">Cadastrar</a></li>
                 <li><a class="dropdown-item" href="consulta_funcionario.php">Consultar</a></li>
-                <li><a class="dropdown-item" href="visualizar_funcionario.php">Visualizar</a></li>
             </ul>
         </div>
     </div>

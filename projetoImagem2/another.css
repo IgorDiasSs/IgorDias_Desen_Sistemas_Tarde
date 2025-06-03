@@ -1,43 +1,112 @@
-body {
+ /* Define estilos gerais para a página */
+ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    background-color: #f4f4f4;
     flex-direction: column;
-    background: linear-gradient(45deg, rgba(6,0,43,1) 0%, rgba(31,80,224,1) 35%, rgba(0,59,122,1) 100%);
-    color: white;
+    background: #06002b !important;
+    background: linear-gradient(45deg,rgba(6, 0, 43, 1) 0%, rgba(31, 80, 224, 1) 35%, rgba(0, 59, 122, 1) 100%) !important;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+p{
+    color:white;
+}
+
+/* Títulos */
+h1 {
+    font-size: 32px;
+    color: #1f50e0 !important;
+    margin-bottom: 25px;
     text-align: center;
 }
 
-h1 {
-    font-size: 45px;
-    margin-bottom: 40px;
-    font-weight: normal;
-    /* já tá branco pelo color do body */
+/* Informações do funcionário */
+.funcionario-info {
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 0 20px;
 }
 
-a {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: rgb(56, 106, 255);
+.funcionario-info p {
+    font-size: 18px;
+    color: #333 !important;
+    margin: 15px 0;
+    justify-content: flex-start;
+}
+
+/* Foto do funcionário */
+.foto-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-container img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    border: 3px solid #1f50e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de exclusão */
+.excluir-form {
+    margin-top: 20px;
+}
+
+.excluir-btn {
+    background-color: #ff4d4d !important;
     color: white;
-    text-decoration: none;
-    font-weight: 600;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(56, 106, 255, 0.5);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    font-size: 20px;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 300px;
 }
 
-a:hover {
-    background-color: rgb(19, 78, 255);
-    box-shadow: 0 6px 12px rgba(19, 78, 255, 0.7);
+.excluir-btn:hover {
+    background-color: #cc0000 !important;
 }
 
-a:active {
-    transform: scale(0.97);
+/* Mensagens de erro */
+.error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Link de voltar */
+.back-link {
+    margin-top: 25px;
+    display: inline-block;
+    color: #1f50e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #0033a0;
+    text-decoration: underline;
 }

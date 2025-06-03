@@ -50,6 +50,7 @@ try {
             <head>
                 <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
                 <title>Visualizar Funcionário</title> <!-- Título da página -->
+                <link rel="stylesheet" href="another.css">
             </head>
             <body>
                 <h1>Dados do Funcionário</h1> <!-- Cabeçalho da página -->

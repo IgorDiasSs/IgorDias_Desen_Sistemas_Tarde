@@ -55,14 +55,13 @@ try{
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="cadastro_funcionario.php">Cadastrar</a></li>
                 <li><a class="dropdown-item" href="consulta_funcionario.php">Consultar</a></li>
-                <li><a class="dropdown-item" href="visualizar_funcionario.php">Visualizar</a></li>
             </ul>
         </div>
     <h1>Consulta de Funcionário</h1>
     <ul>
         <?php foreach($funcionarios as $funcionario): ?>
             <li>
-                <a href="visualizar_funcionario.php?id<?= $funcionario['id']?>">
+                <a href="visualizar_funcionario.php?id=<?= $funcionario['id']?>">
                     <?= htmlspecialchars($funcionario['nome']) ?>
                 </a>
             <form  method="POST">
