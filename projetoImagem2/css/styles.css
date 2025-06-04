@@ -9,7 +9,8 @@ body {
     margin: 0;
     background-color: #f4f4f4; /* Cor de fundo suave */
     flex-direction: column;
-    background: #06002b !important;
+    background: #06002b ;
+    background-repeat: no-repeat;
     background: linear-gradient(45deg,rgba(6, 0, 43, 1) 0%, rgba(31, 80, 224, 1) 35%, rgba(0, 59, 122, 1) 100%) !important;    
 }
 
@@ -23,7 +24,6 @@ form {
     flex-direction: column;
     gap: 15px; /* Espaço entre os elementos */
     width: 300px;
-    margin-top: 10px;
 }
 
 /* Estiliza os rótulos */
@@ -76,12 +76,16 @@ p, h2{
 }
 
 
-.other-bg {
+.glass-bg {
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    padding: 15px;
 }
 
 .dropdown-toggle {
@@ -92,54 +96,31 @@ p, h2{
 .dropdown-item {
     color:rgb(0, 99, 170) !important;
 }
-.d-flex {
-    align-self: flex-end;
-    margin-right: 20px;
-    top:0;
-    justify-self: flex-start;
+
+.goShow {
+  padding: 10px 20px;
+  background-color: rgb(0, 134, 230); 
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-body > ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 600px;
+.goShow:hover {
+  background-color: rgb(0, 149, 255);
+  transform: translateY(-2px);
 }
-
-/* Estiliza apenas os <li> filhos diretos de body > ul */
-body > ul > li {
-    background-color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Estiliza apenas os links dentro dessa lista */
-body > ul > li > a {
+.back {
+    margin-left: 10px;
     text-decoration: none;
-    font-weight: bold;
-    color: #1f50e0;
-    font-size: 20px;
-    transition: color 0.3s;
+    background: rgb(0, 149, 255) !important;
+    color: white;
+    border-radius: 5px !important;
+    padding: 8px;
 }
-
-body > ul > li > a:hover {
-    color: #0033a0;
-}
-
-/* Botão de exclusão sem afetar outros botões Bootstrap */
-button.excluir {
-    background-color: rgb(255, 77, 77);
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 8px;
-}
-
-button.excluir:hover {
-    background-color: rgb(200, 0, 0);
+.back:hover {
+    font-weight: bolder;
+    background: #0e006b  !important;
 }

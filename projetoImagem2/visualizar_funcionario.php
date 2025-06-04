@@ -15,7 +15,7 @@ try {
         $id = $_GET['id']; // Obtém o ID do funcionário da URL
 
         // Recupera os dados do funcionário do banco de dados
-        $sql = "SELECT nome, telefone, tipo_foto, foto FROM funcionarios WHERE id = :id";
+        $sql = "SELECT nome, telefone, tipo_foto, foto, cargo FROM funcionarios WHERE id = :id";
         $stmt = $pdo->prepare($sql); // Prepara a instrução SQL para execução
         $stmt->bindParam(':id', $id, PDO::PARAM_INT); // Vincula o valor do ID ao parâmetro :id
         $stmt->execute(); // Executa a instrução SQL
@@ -50,20 +50,50 @@ try {
             <head>
                 <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
                 <title>Visualizar Funcionário</title> <!-- Título da página -->
-                <link rel="stylesheet" href="another.css">
+                <link rel="stylesheet" href="./css/other-style.css">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
             </head>
             <body>
+                <div class="fixed-top d-flex justify-content-start p-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Navegar
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.php">Home</a></li>
+                        <li><a class="dropdown-item" href="cadastro_funcionario.php">Cadastrar</a></li>
+                        <li><a class="dropdown-item" href="consulta_funcionario.php">Consultar</a></li>
+                    </ul>
+                    <a href="index.php" class="back">ᐊ Voltar</a>
+                </div>
                 <h1>Dados do Funcionário</h1> <!-- Cabeçalho da página -->
                 <!-- Exibe os dados do funcionário -->
-                <p>Nome: <?= htmlspecialchars($funcionario['nome']) ?></p>
-                <p>Telefone: <?= htmlspecialchars($funcionario['telefone']) ?></p>
-                <p>Foto:</p>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Nome</th>
+                                <td><?= htmlspecialchars($funcionario['nome']) ?></td>
+                            </tr>
+                            <tr>
+                                <th>Telefone</th>
+                                <td><?= htmlspecialchars($funcionario['telefone']) ?></td>
+                            </tr>
+                            <tr>
+                                <th>Cargo</th>
+                                <td><?= htmlspecialchars($funcionario['cargo']) ?><?php if($funcionario['nome']) ?></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <p>Foto:</p>
+
+                
                 <img src="data:<?= $funcionario['tipo_foto'] ?>;base64,<?= base64_encode($funcionario['foto']) ?>" alt="Foto do Funcionário"> <!-- Exibe a foto do funcionário -->
 
                 <!-- Formulário para excluir funcionário -->
                 <form method="POST">
                     <input type="hidden" name="excluir_id" value="<?= $id ?>">
-                    <button type="submit">Excluir Funcionário</button>
+                    <button id="excluir" class="excluir" type="submit">Excluir Funcionário</button>
                 </form>
             </body>
             </html>

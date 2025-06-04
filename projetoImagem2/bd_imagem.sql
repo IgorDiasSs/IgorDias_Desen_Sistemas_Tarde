@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `bd_imagem`
 --
-CREATE DATABASE IF NOT EXISTS `bd_imagem` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `bd_imagem` DEFAULT CHARACTER SET utf8mb4;
 USE `bd_imagem`;
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `funcionarios` (
   `tipo_foto` varchar(255) DEFAULT NULL,
   `foto` longblob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4  ;
 
 -- --------------------------------------------------------
 
@@ -53,8 +53,11 @@ CREATE TABLE IF NOT EXISTS `imagens` (
   `tipo_imagem` varchar(50) DEFAULT NULL,
   `imagem` longblob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4  ;
 COMMIT;
+
+ALTER TABLE `funcionarios`
+ADD `cargo` varchar(50);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
